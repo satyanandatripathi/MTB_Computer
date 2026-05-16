@@ -1,4 +1,3 @@
-import React from 'react';
 import { FlatList } from 'react-native';
 import { Card, Text } from 'react-native-paper';
 import { useRide } from '../services/RideContext';

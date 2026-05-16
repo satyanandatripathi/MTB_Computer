@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, Text } from 'react-native-paper';
 
 export default function MetricCard({ title, value }) {

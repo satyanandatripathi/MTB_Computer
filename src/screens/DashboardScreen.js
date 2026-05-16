@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ScrollView, View, Dimensions } from 'react-native';
 import { SegmentedButtons, Text } from 'react-native-paper';
 import { PieChart, LineChart, BarChart } from 'react-native-chart-kit';

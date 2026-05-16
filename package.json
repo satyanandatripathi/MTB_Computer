@@ -8,7 +8,10 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "bundle:web": "expo export --platform web",
+    "bundle:android": "expo export --platform android",
+    "bundle:all": "expo export"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.6.1",
