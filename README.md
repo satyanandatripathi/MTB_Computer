@@ -46,6 +46,7 @@ After the build finishes, EAS prints an APK URL in terminal and dashboard.
 
 Paste your final APK link here after build:
 - **APK Download Link:** `https://expo.dev/artifacts/eas/<your-final-apk-id>.apk`
+
 ## Build / Bundle
 You can generate build artifacts and upload bundles to GitHub Releases.
 
@@ -73,6 +74,26 @@ Use the generated APK/AAB links from EAS and upload those files to GitHub releas
 4. Tap **Stop Ride** when done.
 5. Check **History** for saved sessions.
 6. Use **Dashboard** filters for weekly/monthly/yearly trend insights.
+
+## Fingerprint failure fix
+If you see `Failed to compute project fingerprint` with `Expected `concurrency` to be a number from 1 and up`, run with auto-fingerprint disabled:
+```bash
+EAS_BUILD_SKIP_LOCKFILE_CHECK=1 EAS_SKIP_AUTO_FINGERPRINT=1 eas build --platform android --profile preview
+```
+This repository already includes that in `eas.json` and `npm run eas:build:android`.
+
+## Termux / EAS "expo-build-properties" error fix
+If EAS shows:
+- `Failed to resolve plugin for module "expo-build-properties"`
+
+then make sure dependencies are actually installed before running `eas build`:
+```bash
+rm -rf node_modules package-lock.json
+npm install
+EAS_SKIP_AUTO_FINGERPRINT=1 EAS_BUILD_SKIP_LOCKFILE_CHECK=1 eas build --platform android --profile preview
+```
+
+If your network blocks npm in Termux, run the build from Expo dashboard/git integration or from a machine/network where `npm install` succeeds.
 
 ## Notes
 - Fully on-device; no cloud hosting required.
