@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "MTB Computer",
+    "slug": "mtb-computer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.local.mtbcomputer",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.local.mtbcomputer",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app tracks your MTB ride route and speed.",
+        "NSMotionUsageDescription": "Motion sensors are used for drop detection and ride metrics."
+      }
+    }
+  }
+}
