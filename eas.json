@@ -1,12 +1,15 @@
 {
   "cli": {
-    "version": ">= 15.0.0"
+    "version": ">= 16.0.0",
+    "appVersionSource": "remote"
   },
   "build": {
     "preview": {
       "distribution": "internal",
       "env": {
-        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1"
+        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1",
+        "EAS_SKIP_AUTO_FINGERPRINT": "1",
+        "NODE_ENV": "production"
       },
       "android": {
         "buildType": "apk"
@@ -17,7 +20,9 @@
     },
     "production": {
       "env": {
-        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1"
+        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1",
+        "EAS_SKIP_AUTO_FINGERPRINT": "1",
+        "NODE_ENV": "production"
       },
       "android": {
         "buildType": "app-bundle"
