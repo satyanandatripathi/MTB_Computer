@@ -7,7 +7,10 @@
     "userInterfaceStyle": "dark",
     "android": {
       "package": "com.local.mtbcomputer",
-      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION"]
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
     "ios": {
       "bundleIdentifier": "com.local.mtbcomputer",
@@ -15,6 +18,18 @@
         "NSLocationWhenInUseUsageDescription": "This app tracks your MTB ride route and speed.",
         "NSMotionUsageDescription": "Motion sensors are used for drop detection and ride metrics."
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35
+          }
+        }
+      ]
+    ]
   }
 }
