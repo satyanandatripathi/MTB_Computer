@@ -5,6 +5,9 @@
   "build": {
     "preview": {
       "distribution": "internal",
+      "env": {
+        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1"
+      },
       "android": {
         "buildType": "apk"
       },
@@ -13,6 +16,9 @@
       }
     },
     "production": {
+      "env": {
+        "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1"
+      },
       "android": {
         "buildType": "app-bundle"
       }

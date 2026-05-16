@@ -5,8 +5,8 @@ A complete mobile MTB computer built with Expo React Native that runs fully on-d
 ## Features
 - Real-time AMOLED-friendly speedometer for mounted phone riding.
 - Manual Start Ride / Stop Ride monitoring control.
-- GPS metrics: current speed, top speed, route, ride distance, duration.
-- Sensor metrics: drop/jump events (accelerometer), uphill/downhill split (altitude), calories estimate.
+- GPS + accelerometer hybrid speed engine with quality/accuracy telemetry.
+- Sensor metrics: drop/jump events, uphill/downhill split, calories estimate.
 - OpenStreetMap integration using free OSM tiles.
 - Local-only ride history storage (no hosting, no account, no backend).
 - Dashboard with filters + visualizations:
@@ -26,6 +26,26 @@ npm install
 npm run start
 ```
 
+## EAS Build (APK) — fixed lockfile check issue
+This project is configured to bypass the EAS lockfile check at build time because some environments cannot install dependencies due registry policy restrictions.
+
+### Build APK
+```bash
+npm install -g eas-cli
+npx eas login
+npm run eas:build:android
+```
+
+### If you prefer direct command
+```bash
+EAS_BUILD_SKIP_LOCKFILE_CHECK=1 eas build --platform android --profile preview
+```
+
+## APK output link
+After the build finishes, EAS prints an APK URL in terminal and dashboard.
+
+Paste your final APK link here after build:
+- **APK Download Link:** `https://expo.dev/artifacts/eas/<your-final-apk-id>.apk`
 ## Build / Bundle
 You can generate build artifacts and upload bundles to GitHub Releases.
 

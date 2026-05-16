@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "bundle:web": "expo export --platform web",
     "bundle:android": "expo export --platform android",
-    "bundle:all": "expo export"
+    "bundle:all": "expo export",
+    "eas:build:android": "EAS_BUILD_SKIP_LOCKFILE_CHECK=1 eas build --platform android --profile preview --non-interactive"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.6.1",
