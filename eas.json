@@ -8,8 +8,7 @@
       "distribution": "internal",
       "env": {
         "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1",
-        "EAS_SKIP_AUTO_FINGERPRINT": "1",
-        "NODE_ENV": "production"
+        "EAS_SKIP_AUTO_FINGERPRINT": "1"
       },
       "android": {
         "buildType": "apk"
@@ -21,8 +20,7 @@
     "production": {
       "env": {
         "EAS_BUILD_SKIP_LOCKFILE_CHECK": "1",
-        "EAS_SKIP_AUTO_FINGERPRINT": "1",
-        "NODE_ENV": "production"
+        "EAS_SKIP_AUTO_FINGERPRINT": "1"
       },
       "android": {
         "buildType": "app-bundle"
